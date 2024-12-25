@@ -1,101 +1,199 @@
+import Header from "@/components/header";
+import Link from "next/link";
 import Image from "next/image";
-
-export default function Home() {
+import { FaRegClock } from "react-icons/fa";
+import { SlCalender } from "react-icons/sl";
+import HomeSection3 from "@/components/homesection3";
+function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <div className="bg-peach h-[900px]">
+        <Header />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        {/* hero section */}
+        <div className=" flex justify-evenly items-center">
+          <div className="w-[27.5rem] h-[17.25rem] flex justify-center items-center font-semibold">
+            <div className=" text-6xl leading-relaxed ">
+              <p className="">Rocket single</p>
+              <p>seater</p>
+              <Link
+                className="underline underline-offset-8 decoration-solid text-2xl"
+                href="#"
+              >
+                Shop Now
+              </Link>
+            </div>
+          </div>
+
+          <div className=" ">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/hackathonsofa.png"
+              alt="heroImage"
+              width={800}
+              height={1000}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </div>
+
+      {/* second section */}
+
+      <div className="h-[42rem] bg-[#FAFAF4] flex justify-evenly  ">
+        <div className=" w-[37.813rem] h-[35.125rem]">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/hackathontable.png"
+            alt="table"
+            width={400}
+            height={300}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <p className="text-3xl font-medium">Side Table</p>
+          <p className="underline  underline-offset-8">View More</p>
+        </div>
+
+        <div className=" w-[37.813rem] h-[35.125rem]">
+          <Image src="/sofay.png" alt="table" width={380} height={300} />
+          <p className="text-3xl font-medium">Side Table</p>
+          <p className="underline underline-offset-8">View More</p>
+        </div>
+      </div>
+
+      {/* third section */}
+
+      <HomeSection3 />
+
+      {/* fourth section */}
+      <div className="h-[39.938rem]  bg-[#FFF9E5] flex justify-evenly items-center">
+        <div className="">
+          <Image src="/image5.png" alt="image" width={850} height={200} />
+        </div>
+        <div className="w-[331px] h-[200px] flex flex-col justify-between items-center">
+          <p className="text-xl font-medium">New Arrivals</p>
+          <p className="text-4xl font-bold">Asgaard sofa</p>
+          <button className="w-[255px] h-[64px]  border-black border-[1px] text-xl">
+            Order Now
+          </button>
+        </div>
+      </div>
+
+      {/*fifth section  */}
+      <div className="h-[850px] bg-[#FFFFFF]">
+        <div className="flex flex-col items-center py-4 gap-y-3">
+          <h2 className="text-3xl font-medium">Our Blogs</h2>
+          <p className="text-gray-500">
+            Find a bright ideal to suit your taste with our great selection
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center py-9">
+          <div className=" h-[550px] w-[1240px]  flex justify-between">
+            <div className="flex flex-col items-center justify-center w-[393px] h-[520px] ">
+              <div>
+                <img
+                  className="h-[393px] w-[393px] rounded-2xl"
+                  src="/image6.jpg"
+                  alt="img"
+                />
+              </div>
+
+              <div className="leading-10 mt-3 flex flex-col items-center">
+                <p className=" font-normal">
+                  Going all-in with millennial design
+                </p>
+
+                <button className="underline underline-offset-8 font-semibold ">
+                  Read More
+                </button>
+
+                <div className="flex items-center font-medium">
+                  <span className="flex items-center mr-3">
+                    <FaRegClock />5 min
+                  </span>
+                  <span className="flex items-center">
+                    <SlCalender />
+                    12<sup>th</sup> Oct 2022
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center justify-center w-[393px] h-[520px] ">
+              <div>
+                <img
+                  className="h-[393px] w-[393px] rounded-2xl"
+                  src="/image7.jpg"
+                  alt="img"
+                />
+              </div>
+
+              <div className="leading-10 mt-3 flex flex-col items-center">
+                <p className=" font-normal">
+                  Going all-in with millennial design
+                </p>
+
+                <button className="underline underline-offset-8 font-semibold ">
+                  Read More
+                </button>
+
+                <div className="flex items-center font-medium">
+                  <span className="flex items-center mr-3">
+                    <FaRegClock />5 min
+                  </span>
+                  <span className="flex items-center">
+                    <SlCalender />
+                    12<sup>th</sup> Oct 2022
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center justify-center w-[393px] h-[520px] ">
+              <div>
+                <img
+                  className="h-[393px] w-[393px] rounded-2xl"
+                  src="/image8.jpg"
+                  alt="img"
+                />
+              </div>
+
+              <div className="leading-10 mt-3 flex flex-col items-center">
+                <p className=" font-normal">
+                  Going all-in with millennial design
+                </p>
+
+                <button className="underline underline-offset-8 font-semibold ">
+                  Read More
+                </button>
+
+                <div className="flex items-center font-medium">
+                  <span className="flex items-center mr-3">
+                    <FaRegClock />5 min
+                  </span>
+                  <span className="flex items-center">
+                    <SlCalender />
+                    12<sup>th</sup> Oct 2022
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button className="py-7 underline underline-offset-[14px]">
+            View All Post
+          </button>
+        </div>
+      </div>
+
+      {/* six section */}
+
+
+      <div className="h-[450px] bg-[url('/image9.jpg')] bg-cover flex justify-center items-center">
+      <div className="w-[454px] h-[202] flex flex-col items-center justify-between">
+        <p className="text-5xl font-bold ">Our Instagram</p>
+        <p className="text-lg ">Follow our store on Instagram</p>
+        <button className="bg-[#FAF4F4] h-[64px] w-[255px] rounded-full text-xl">Follow Us</button>
+      </div>
+      </div>
+
+    </>
   );
 }
+export default Home;
