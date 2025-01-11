@@ -1,4 +1,4 @@
-export default function ShopBackground({firstName , secondName , thirdName}:{firstName:string , secondName:String , thirdName:string} ){
+export default function ShopBackground({firstName , secondName , thirdName}:{firstName:string , secondName:string , thirdName:string} ){
     return(
         <>
         <div className="h-[316px] bg-[url(/image10.jpg)] bg-cover flex flex-col justify-center items-center">
