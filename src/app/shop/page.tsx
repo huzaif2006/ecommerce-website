@@ -1,4 +1,6 @@
 import Header from "@/components/header";
+import ShopBanner from "@/components/shopbanner";
+import ShopBackground from "@/components/shopbackground";
 function Shop() {
   return (
     <>
@@ -6,18 +8,8 @@ function Shop() {
 
       {/* shop background */}
 
-      <div className="h-[316px] bg-[url(/image10.jpg)] bg-cover flex flex-col justify-center items-center">
-        <div className="w-[124px] h-[132px]  flex flex-col justify-evenly items-center">
-          <img className="h-[50px] w-[80px]" src="/image11.png" alt="logo" />
-          <h2 className="text-5xl font-medium">Shop</h2>
-        </div>
-        <div>
-          <p>
-            {" "}
-            <span className="font-medium">Home {">"}</span> Shop
-          </p>
-        </div>
-      </div>
+      <ShopBackground firstName="Shop" secondName="Home" thirdName="My account"/>
+      
 
       <br />
       <br />
@@ -252,7 +244,7 @@ function Shop() {
               />
             </div>
             <div className="h-[71px] w-[194px] text-lg font-normal leading-10">
-              Granite  site table
+              Granite site table
               <p className="text-2xl font-semibold">Rs. 25,000.00</p>
             </div>
           </div>
@@ -276,13 +268,17 @@ function Shop() {
 
         {/* Buttons */}
 
-        <div className="space-x-8 ">
-            <button className="h-[60px] w-[60px] bg-[#FBEBB5] rounded-xl">1</button>
-            <button className="h-[60px] w-[60px] bg-[#FFF9E5] rounded-xl">2</button>
-            <button className="h-[60px] w-[60px] bg-[#FFF9E5] rounded-xl">3</button>
-            <button className="h-[60px] w-[98px] bg-[#FFF9E5] rounded-xl ">Next</button>
-          </div>
+        <div className="flex justify-center items-center pt-24 pb-5 space-x-2 sm:space-x-4 md:space-x-8">
+    <button className="h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] md:h-[60px] md:w-[60px] bg-[#FBEBB5] rounded-xl">1</button>
+    <button className="h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] md:h-[60px] md:w-[60px] bg-[#FFF9E5] rounded-xl">2</button>
+    <button className="h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] md:h-[60px] md:w-[60px] bg-[#FFF9E5] rounded-xl">3</button>
+    <button className="h-[40px] w-[70px] sm:h-[50px] sm:w-[80px] md:h-[60px] md:w-[98px] bg-[#FFF9E5] rounded-xl">Next</button>
+</div>
+
+
       </div>
+
+      <ShopBanner/>
     </>
   );
 }

@@ -16,7 +16,7 @@ function Header() {
         <div className="flex justify-between items-center px-4 py-4 lg:px-20">
           {/* Logo */}
           <div className="text-lg font-bold">
-            <Link href="/"></Link>
+            <Link href="/">hello</Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -29,7 +29,7 @@ function Header() {
 
           {/* Icons */}
           <div className="hidden lg:flex space-x-6 text-lg">
-            <Link href="/account">
+            <Link href="/myaccount">
               <FaRegUser />
             </Link>
             <Link href="/search">
@@ -70,7 +70,7 @@ function Header() {
               </Link>
             </nav>
             <div className="flex justify-center space-x-6 mt-4 text-lg">
-              <Link href="/account" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/myaccount" onClick={() => setIsMenuOpen(false)}>
                 <FaRegUser />
               </Link>
               <Link href="/search" onClick={() => setIsMenuOpen(false)}>
