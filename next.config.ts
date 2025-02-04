@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  images: {
+    domains: ['next-ecommerce-template-4.vercel.app', "plus.unsplash.com", "cdn.sanity.io", 'images.unsplash.com'], // Add the required domain here
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
