@@ -1,7 +1,8 @@
-"use client"; // ✅ Client Component
+"use client"; 
 
 import { useCart } from "@/context/CartContext";
-import Image from "next/image"; // ✅ Next.js optimized image
+import { useWishlist } from "@/context/WishlistContext"; // 🆕 Wishlist Context Import
+import Image from "next/image"; 
 
 type Product = {
   _id: string;
@@ -17,6 +18,7 @@ type Product = {
 
 const ProductDetails = ({ product }: { product: Product }) => {
   const { addToCart } = useCart();
+  const { addToWishlist, wishlist } = useWishlist(); // 🆕 Wishlist functions
 
   // Calculate discounted price
   const discountedPrice = product.discountPercentage
@@ -34,6 +36,18 @@ const ProductDetails = ({ product }: { product: Product }) => {
     });
   };
 
+  // Handle Add to Wishlist
+  const handleAddToWishlist = () => {
+    addToWishlist({
+      id: product._id,
+      name: product.name,
+      price: discountedPrice,
+      image: product.imagePath,
+    });
+  };
+
+  const isWishlisted = wishlist.some((item) => item.id === product._id);
+
   return (
     <div className="container mx-auto p-6">
       <div className="grid md:grid-cols-2 gap-10 bg-white shadow-lg rounded-lg p-6">
@@ -47,7 +61,7 @@ const ProductDetails = ({ product }: { product: Product }) => {
           <Image 
             src={product.imagePath} 
             alt={product.name} 
-            width={500} // ✅ Set width & height for optimization
+            width={500} 
             height={500}
             className="w-full h-auto object-cover rounded-md shadow-md"
           />
@@ -79,13 +93,23 @@ const ProductDetails = ({ product }: { product: Product }) => {
           {/* Description */}
           <p className="mt-4 text-gray-700">{product.description}</p>
 
-          {/* Add to Cart Button */}
-          <button 
-            onClick={handleAddToCart} 
-            className="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition"
-          >
-            Add to Cart
-          </button>
+          {/* Buttons */}
+          <div className="mt-6 flex space-x-4">
+            <button 
+              onClick={handleAddToCart} 
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition"
+            >
+              Add to Cart
+            </button>
+
+            <button 
+              onClick={handleAddToWishlist} 
+              className={`py-3 px-6 rounded-lg shadow-md transition ${isWishlisted ? "bg-gray-500 text-white" : "bg-pink-500 hover:bg-pink-600 text-white"}`}
+            >
+              {isWishlisted ? "Wishlisted" : "Add to Wishlist"}
+            </button>
+          </div>
+
         </div>
       </div>
     </div>
