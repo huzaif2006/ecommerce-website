@@ -5,7 +5,7 @@ import Link from "next/link";
 import Header from "@/components/header";
 
 export default function CartPage() {
-  const { cart, removeFromCart, updateQuantity, clearCart } = useCart();
+  const { cart, removeFromCart, updateQuantity } = useCart(); // Removed clearCart
 
   return (
     <>
@@ -105,7 +105,7 @@ export default function CartPage() {
               <div className="flex justify-between mt-2">
                 <p className="text-gray-600">Subtotal</p>
                 <p className="text-gray-600">
-                  $
+                  $$
                   {cart
                     .reduce(
                       (acc, item) => acc + Number(item.price) * item.quantity,

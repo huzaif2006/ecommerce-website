@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     let body;
     try {
       body = await req.json();
-    } catch (error) {
+    } catch {
       return NextResponse.json({ success: false, error: "Invalid JSON format" });
     }
 
@@ -43,8 +43,8 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ success: true, data });
-  } catch (error) {
-    console.error("Email Sending Error:", error);
+  } catch {
+    console.error("Email Sending Error");
     return NextResponse.json({ success: false, error: "Internal server error" });
   }
 }
