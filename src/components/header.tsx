@@ -20,7 +20,7 @@ function Header() {
       <div className="flex justify-between items-center px-4 py-4 lg:px-20">
         {/* Logo */}
         <div className="text-lg font-bold text-gray-800">
-          <Link href="/">hello</Link>
+          <Link href="/">Home haven</Link>
         </div>
 
         {/* Desktop Navigation */}
