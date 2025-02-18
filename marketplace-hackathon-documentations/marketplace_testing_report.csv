@@ -1,0 +1,19 @@
+Test Case ID,Test Case Description,Test Steps,Expected Result,Actual Result,Status,Severity Level,Assigned To,Remarks
+PL001,Product Listing Page Load,"1. Navigate to homepage 2. Wait for product list to load 3. Check all product cards visibility",All product cards should be visible with images and prices,Products loaded successfully with all details,Passed,High,Huzaif,None
+PL002,Product Search Functionality,"1. Click search bar 2. Enter product name 3. Press enter or search button",Relevant search results should appear,Search results match the query,Passed,High,Huzaif,None
+PL003,Product Filter Operation,"1. Select category filter 2. Choose price range 3. Apply filters",Products should be filtered according to selected criteria,Filters working as expected,Passed,Medium,Huzaif,None
+CT001,Add to Cart Function,"1. Click add to cart button 2. Check cart icon update 3. Verify cart total",Product should be added to cart with updated total,Cart updates correctly,Passed,High,Huzaif,None
+CT002,Remove from Cart,"1. Open cart 2. Click remove item 3. Check cart update",Item should be removed and cart total updated,Removal successful,Passed,High,Huzaif,None
+CT003,Cart Quantity Update,"1. Open cart 2. Change item quantity 3. Check total update",Cart total should update based on new quantity,Quantity updates correctly,Passed,Medium,Huzaif,None
+ERR001,Network Error Handling,"1. Disable internet 2. Attempt to load products 3. Check error message",Should show network error message with retry option,Error handled appropriately,Passed,High,Huzaif,None
+ERR002,Invalid Search Handling,"1. Enter invalid search term 2. Submit search 3. Check response",Should show 'No results found' message,Proper error message displayed,Passed,Medium,Huzaif,None
+PERF001,Page Load Performance,"1. Clear cache 2. Load homepage 3. Check load time",Page should load within 3 seconds,Loads in 2.8 seconds,Passed,High,Huzaif,Using Lighthouse metrics
+PERF002,Image Loading,"1. Check product images 2. Verify lazy loading 3. Monitor network tab",Images should lazy load as user scrolls,Lazy loading working,Passed,Medium,Huzaif,None
+SEC001,API Key Security,"1. Check network requests 2. Inspect frontend code 3. Verify key storage",API keys should not be exposed in frontend,Keys properly secured,Passed,High,Huzaif,Using environment variables
+SEC002,Input Validation,"1. Test form inputs 2. Try SQL injection 3. Test XSS attempts",All inputs should be properly sanitized,Input validation working,Passed,High,Huzaif,None
+RESP001,Mobile Responsiveness,"1. Test on mobile device 2. Check all functions 3. Verify layouts",All features should work on mobile devices,Fully responsive,Passed,High,Huzaif,Tested on iOS and Android
+RESP002,Tablet Responsiveness,"1. Test on tablet 2. Verify layouts 3. Check functionality",Layout should adapt to tablet screen,Tablet layout working,Passed,Medium,Huzaif,Tested on iPad
+BR001,Chrome Compatibility,"1. Test all features 2. Check rendering 3. Verify functionality",All features should work in Chrome,Fully functional,Passed,High,Huzaif,Chrome v120
+BR002,Firefox Compatibility,"1. Test all features 2. Check rendering 3. Verify functionality",All features should work in Firefox,Fully functional,Passed,High,Huzaif,Firefox v115
+BR003,Safari Compatibility,"1. Test all features 2. Check rendering 3. Verify functionality",All features should work in Safari,Minor styling issues,Failed,Medium,Huzaif,"Font rendering issues, Assigned for fix"
+UAT001,User Flow Testing,"1. Complete purchase flow 2. Test navigation 3. Verify user experience",User should complete purchase without issues,Flow is intuitive,Passed,High,Huzaif,User feedback positive
